@@ -16,10 +16,10 @@ int main()
 
 #pragma omp parallel 
 	{
-		#pragma omp for schedule(static)
+#pragma omp for reduction(+:counter) schedule(dynamic) 
 		for (i = 0; i <= NUM_END; i++) {
 			if (isPrime(i)){
-#pragma omp critical (counter)
+
 				counter++;
 			}
 			//sum += i;

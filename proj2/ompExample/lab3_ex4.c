@@ -4,7 +4,7 @@
 #define NUM_THREADS 4
 #define NUM_END 200000
 
-int main()
+int main(int argc, char* argv[])
 {
 	int counter = 0;
 	int i;
